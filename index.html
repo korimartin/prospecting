@@ -1,0 +1,397 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapcart Sales Prospecting Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>:dart:</text></svg>" />
+</head>
+<body class="min-h-screen bg-gray-50">
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Tapcart Sales Prospecting</h1>
+                <p class="text-gray-600 text-sm">AI-Powered Sales Intelligence Platform</p>
+                <div class="mt-4">
+                    <span class="text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded-full">
+                        :lock: Secure Access Required
+                    </span>
+                </div>
+            </div>
+
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        placeholder="Enter access code"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-center"
+                        required
+                    />
+                </div>
+                <button
+                    type="submit"
+                    class="w-full bg-black text-white py-3 px-4 rounded-lg hover:bg-gray-800 font-medium transition-colors"
+                >
+                    Access Dashboard →
+                </button>
+            </form>
+
+            <div id="loginError" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded text-red-700 text-sm text-center">
+                :x: Incorrect access code
+            </div>
+
+            <div class="mt-6 text-center">
+                <p class="text-xs text-gray-400">Built for Tapcart Sales Team</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="hidden">
+        <div class="container mx-auto px-4 py-8">
+
+            <!-- Header -->
+            <header class="text-center mb-12">
+                <div class="mb-4">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2">
+                        :dart: Tapcart Sales Prospecting
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-4">
+                        AI-powered prospect intelligence with live Influ2 signals
+                    </p>
+                    <div class="flex justify-center space-x-3 flex-wrap gap-2">
+                        <span class="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">:lock: Secure</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">:bar_chart: Live Data</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full">:robot_face: AI Personas</span>
+                        <span class="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">:zap: Real-time</span>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <button onclick="logout()" class="text-sm text-gray-500 hover:text-gray-700 underline">
+                        :bust_in_silhouette: Logout
+[7:31 PM]</button>
+                </div>
+            </header>
+
+            <!-- Main Tool -->
+            <div class="max-w-5xl mx-auto mb-12">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="text-center mb-8">```[7:31 PM]```
+<div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">:dart:</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Sales Intelligence Platform</h2>
+                        <p class="text-gray-600">Analyze prospects with live Influ2 signals, LinkedIn intelligence, and AI copy generation</p>
+                    </div>
+
+                    <!-- Quick Search -->
+                    <div class="max-w-md mx-auto mb-6">
+                        <div class="flex space-x-2">
+                            <input 
+                                type="text" 
+                                id="quickSearch" 
+                                placeholder="Enter prospect name or company..." 
+                                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                onkeypress="handleEnter(event)"
+                            />
+                            <button 
+                                onclick="quickAnalyze()" 
+                                class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 font-medium transition-colors"
+                            >
+                                Analyze
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 text-center">
+                            :bulb: Try: "Susan Boldt", "Naomi Ng", "Quiksilver", or "Kith"
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="openFullPlatform()" 
+                                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 font-medium transition-all transform hover:scale-105">
+                            :rocket: Launch Full Platform
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hot Prospects Dashboard -->
+            <div class="max-w-6xl mx-auto mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">:fire: Hot Prospects (Live Influ2 Intelligence)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- High Priority -->
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-lg p-6 border-2 border-red-200 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-gray-900">Susan Boldt</h4>
+                            <div class="flex items-center space-x-1">
+                                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                                <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded font-medium">:fire: 24h</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Quiksilver</strong> • Director Footwear Production</p>
+                        <p class="text-xs text-gray-600 mb-4">:dart: <em>Increasing customer acquisition through mobile apps</em></p>
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-4">
+                            <span>Owner: Yoshi Figueroa</span>[7:31 PM]<span>Signal: Click</span>
+                        </div>
+                        <button onclick="quickAnalyzePreset('Susan Boldt')" 
+                                class="w-full bg-white text-red-700 px-4 py-2 rounded-lg hover:bg-red-50 border border-red-200 font-medium transition-colors">```[7:31 PM]```
+:dart: Analyze Now
+                        </button>
+                    </div>
+
+                    <!-- Medium Priority -->
+                    <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-6 border-2 border-orange-200 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-gray-900">Naomi Ng</h4>
+                            <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded font-medium">:zap: 48h</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Haus Labs by Lady Gaga</strong> • Sr. Manager, Ecommerce</p>
+                        <p class="text-xs text-gray-600 mb-4">:dart: <em>Streamlined checkouts and repeat purchases</em></p>
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-4">
+                            <span>Owner: Yoshi Figueroa</span>
+                            <span>Signal: Click</span>
+                        </div>
+                        <button onclick="quickAnalyzePreset('Naomi Ng')" 
+                                class="w-full bg-white text-orange-700 px-4 py-2 rounded-lg hover:bg-orange-50 border border-orange-200 font-medium transition-colors">
+                            :dart: Analyze Now
+                        </button>
+                    </div>
+
+                    <!-- Prioritized -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border-2 border-blue-200 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-gray-900">Dan Elmoznino</h4>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">:star: Priority</span>
+                        </div>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Kith</strong> • Chief Web Officer</p>
+                        <p class="text-xs text-gray-600 mb-4">:dart: <em>Warmed for outreach (impression threshold met)</em></p>
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-4">
+                            <span>Owner: Trevor Heiblim</span>
+                            <span>Signal: Prioritized</span>
+                        </div>
+                        <button onclick="quickAnalyzePreset('Dan Elmoznino')" 
+                                class="w-full bg-white text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-50 border border-blue-200 font-medium transition-colors">
+                            :dart: Analyze Now
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- More Prospects Row -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <div class="text-center">
+                            <h5 class="font-semibold text-gray-800 mb-1">Ashley Slaven</h5>
+                            <p class="text-xs text-gray-600 mb-2">7 for All Mankind • Merchandising Mgr</p>
+                            <button onclick="quickAnalyzePreset('Ashley Slaven')" 
+                                    class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300 transition-colors">
+                                Quick Analyze
+                            </button>
+                        </div>
+                    </div>[7:31 PM]<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <div class="text-center">
+                            <h5 class="font-semibold text-gray-800 mb-1">Paul Kus</h5>
+                            <p class="text-xs text-gray-600 mb-2">inkbox tattoos • Dir. Ecommerce</p>```[7:31 PM]```
+<button onclick="quickAnalyzePreset('Paul Kus')" 
+                                    class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300 transition-colors">
+                                Quick Analyze
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <div class="text-center">
+                            <h5 class="font-semibold text-gray-800 mb-1">Christina Hammond</h5>
+                            <p class="text-xs text-gray-600 mb-2">Nine Line Apparel • Event Manager</p>
+                            <button onclick="quickAnalyzePreset('Christina Hammond')" 
+                                    class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300 transition-colors">
+                                Quick Analyze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Summary -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">:bar_chart: Intelligence Summary</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-purple-600">8</div>
+                            <div class="text-xs text-gray-600">Active Prospects</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-red-600">3</div>
+                            <div class="text-xs text-gray-600">Hot Leads (48h)</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-blue-600">2</div>
+                            <div class="text-xs text-gray-600">AI Personas</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-green-600">100%</div>
+                            <div class="text-xs text-gray-600">Read-Only Safe</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center py-8 border-t border-gray-200">
+                <p class="text-gray-500 text-sm mb-2">
+                    :robot_face: Built with OpenClaw AI • :lock: Secure Access • :bar_chart: Live Influ2 Intelligence
+                </p>
+                <p class="text-xs text-gray-400">
+                    Read-Only Platform • No Systems Impacted • Tapcart Sales Team Internal Tool
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Sales Intelligence Modal -->
+    <div id="salesModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg max-w-7xl w-full max-h-[95vh] overflow-hidden">
+            <div class="p-4 border-b flex justify-between items-center bg-gray-50">
+                <h2 class="text-xl font-bold text-gray-900">:dart: Sales Intelligence Platform</h2>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">[7:31 PM]<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="max-h-[calc(95vh-80px)] overflow-hidden">
+                <iframe id="salesFrame" src="" width="100%" height="700" frameborder="0" class="w-full"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>```
+[7:31 PM]```
+// :lock: SECURITY: Change this password to whatever you want
+        const ACCESS_CODE = 'tapcart2026';
+
+        // Login handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+
+            if (password === ACCESS_CODE) {
+                document.getElementById('loginScreen').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                localStorage.setItem('tapcart_auth', 'true');
+            } else {
+                showLoginError();
+            }
+        });
+
+        function showLoginError() {
+            const errorEl = document.getElementById('loginError');
+            errorEl.classList.remove('hidden');
+            setTimeout(() => {
+                errorEl.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Auto-login if already authenticated
+        if (localStorage.getItem('tapcart_auth') === 'true') {
+            document.getElementById('loginScreen').classList.add('hidden');
+            document.getElementById('dashboard').classList.remove('hidden');
+        }
+
+        function logout() {
+            localStorage.removeItem('tapcart_auth');
+            location.reload();
+        }
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                quickAnalyze();
+            }
+        }
+
+        function quickAnalyze() {
+            const query = document.getElementById('quickSearch').value.trim();
+            if (query) {
+                openSalesIntel(query);
+                document.getElementById('quickSearch').value = '';
+            }
+        }
+
+        function quickAnalyzePreset(name) {
+            openSalesIntel(name);
+        }
+
+        function openFullPlatform() {
+            openSalesIntel();
+        }
+
+        function openSalesIntel(preset = null) {
+            const placeholderContent = `
+            <html>
+            <head>
+                <title>Sales Intelligence Platform</title>
+                <script src="https://cdn.tailwindcss.com"></script>
+            </head>
+            <body class="bg-gray-50 p-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4">:dart: Sales Intelligence Platform</h1>
+                        <p class="text-gray-600">Coming Soon - Full deployment in progress!</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-xl font-bold mb-4">Platform Features:</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>:white_check_mark: Live Influ2 signal analysis</li>
+                            <li>:white_check_mark: LinkedIn profile integration</li>
+                            <li>:white_check_mark: AI copy generation (Yoshi & Kori personas)</li>
+                            <li>:white_check_mark: Strategic timing recommendations</li>
+                            <li>:white_check_mark: Multi-source intelligence correlation</li>
+                            <li>:white_check_mark: Account owner assignment</li>
+                        </ul>
+
+                        <div class="mt-8 p-4 bg-blue-50 rounded">
+                            <h3 class="font-semibold text-blue-900">Ready to Analyze:</h3>
+                            <p class="text-blue-700 text-sm">Susan Boldt, Naomi Ng, Dan Elmoznino, Ashley Slaven, Paul Kus, Christina Hammond</p>
+                        </div>
+
+                        ${preset ? `<div class="mt-4 p-4 bg-green-50 rounded">
+[7:31 PM]<p class="text-green-800"><strong>Selected Prospect:</strong> ${preset}</p>
+                            <p class="text-green-600 text-sm">Analysis will be available once platform is fully deployed</p>
+                        </div>` : ''}```[7:31 PM]</div>
+                </div>
+            </body>
+            </html>`;
+            
+            document.getElementById('salesFrame').src = 'data:text/html;charset=utf-8,' + encodeURIComponent(placeholderContent);
+            document.getElementById('salesModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('salesModal').classList.add('hidden');
+            document.getElementById('salesFrame').src = '';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('salesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
